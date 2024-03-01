@@ -2,8 +2,7 @@
 html {
   box-sizing: border-box;
   font-size: 10px;
-  
-background-color: #f3e6e8;
+background-color: #949398;
 background-image: linear-gradient(315deg, #f3e6e8 0%, #d5d0e5 74%);
 
 }
@@ -13,13 +12,49 @@ background-image: linear-gradient(315deg, #f3e6e8 0%, #d5d0e5 74%);
 }
 
 body {
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: 'Shadows Into Light', cursive;
+  position: relative;
 }
-
+.overlay{
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  background-color: rgb(129, 147, 147);
+  z-index: 99;
+  border-radius: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.overlay>i{
+  font-size: 2vw;
+  position: absolute;
+  top: 0%;
+  right: 2%;
+  cursor: pointer;
+}
+.overlay i:active{
+  scale: .8;
+}
+ol li{
+  font-size: 1.5vw;
+  text-align: center;
+}
 .start{
   text-align: center;
+}
+button{
+  background: rgb(181, 185, 181);
+  font-size: 3rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+button:active{
+  scale: .9;
 }
 
 h1 {
@@ -35,8 +70,9 @@ h1 {
  }
 
 .game {
-  width: 800px;
-  height: 400px;
+  position: relative;
+  width: 60%;
+  height: 450px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -47,6 +83,7 @@ h1 {
   flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;
+ 
 }
 
 .hole:after {
@@ -69,15 +106,26 @@ h1 {
   width: 100%;
   height: 100%;
   transition:all 0.4s ease;
+  cursor: pointer;
 }
 
 .hole.up .mole {
   top: 0;
 }
 
-button{
-  background: rgba(190, 19, 19, 0.2);
-  border: red;
-  font-size: 3rem;
-  cursor: pointer;
+@media screen and (max-width: 500px) {
+.game{
+  width: 100%;
 }
+.overlay{
+  width: 100%;
+}
+ol li{
+  font-size: 4vw;
+}
+.overlay i{
+  font-size: 7vw;
+  right:3%;
+}
+}
+

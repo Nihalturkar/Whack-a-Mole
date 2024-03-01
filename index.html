@@ -5,13 +5,27 @@
   <title>Whack A Mole!</title>
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 <body>
-  
+  <div class="overlay">
+    <i id="close" class="ri-close-large-fill"></i>
+    <h1>Intructions to play this game</h1>
+    <ol >
+      <li>Click the button "start" to start a game.</li>
+      <li>Tap the moles as they appear to score points.</li>
+      <li>Speed increases as you progress—stay sharp!</li>
+      <li>Achieve the highest score within the time limit</li>
+      <li>Have fun and challenge yourself!</li>
+    </ol>
+  </div>
   <h1>Whack-a-mole!</h1>
   <h1 class="score"> 0</h1>
   <div class = "start">
-  <button onClick="startGame()">Start!</button>
+  <button class="btn" onClick="startGame()">Start!</button>
   </div>
 
   <div class="game">
